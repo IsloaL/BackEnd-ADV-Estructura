@@ -10,7 +10,7 @@ import Car from '../models/Car.js'
 //CREATE
 
 
-const createCar = (req, res) => {
+const createCar = async (req, res) => {
     /**
  *  brand: 'Nissan',
     carType: 'Sedan',
@@ -20,7 +20,7 @@ const createCar = (req, res) => {
     version: 'GSR 2000',
     vin: '684FTH684XFHXFGH864'
  */
-    const newCar = Car.create(req.body);
+    const newCar = await Car.create(req.body);
     res.json(newCar)
 };
 

@@ -27,7 +27,7 @@ connect();
 
 const api = express();
 
-api.use(express.json());
+api.use(express.json()); //esta línea es muy importante para que express pueda usar JSONs
 
 api.listen(8000, () => {
     console.log("API corriendo en puerto 8000");

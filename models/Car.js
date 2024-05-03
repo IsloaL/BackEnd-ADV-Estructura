@@ -15,7 +15,8 @@ const carSchema = new mongoose.Schema({
     version: String,
     color: String,
     carType: String,
-    vin: String
+    vin: String,
+    prueba: String
 }); //lo que va entre paréntesis son los campos (tipo de dato) que contendrá 
 
 //2
