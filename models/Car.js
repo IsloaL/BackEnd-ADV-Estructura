@@ -6,7 +6,10 @@ import mongoose, { model } from "mongoose";
  */
 //1
 const carSchema = new mongoose.Schema({
-    plate: String,
+    plate: {
+        type: String,
+        required: true
+    },
     model: String,
     brand: String,
     version: String,

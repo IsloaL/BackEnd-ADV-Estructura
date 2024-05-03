@@ -19,12 +19,15 @@ import express from "express";
 /*pasos para crear la API
 1.- Importar express
 2.- Crear una app con express
-3.- usar apop.listen para abrir los puertos*/
+3.- usar app.listen para abrir los puertos*/
+
+import { carRoutes } from './routes/carRoutes.js';
 
 connect();
 
 const api = express();
 
+api.use(express.json());
 
 api.listen(8000, () => {
     console.log("API corriendo en puerto 8000");
@@ -33,3 +36,5 @@ api.listen(8000, () => {
 api.get('/test', (req, res) => {
     res.send('Hola, esto es una prueba Ü');
 });
+
+api.use(carRoutes);
